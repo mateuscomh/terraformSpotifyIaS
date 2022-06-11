@@ -1,5 +1,19 @@
 # Create a Spotify Playlist with Terraform
+## How to execute it
+```sh
+source .envrc
+docker run --rm -it -p 27228:27228 --env-file ./.env ghcr.io/conradludgate/spotify-auth-proxy
+```
+In another terminal:
 
-Create a playlist on Spotify by writing it as a Terraform configuration.
+Click the link from docker output to authorize spotify.
 
-Follow along with the [tutorial](https://learn.hashicorp.com/tutorials/terraform/spotify-playlist) HashiCorp Learn.
+Copy apikey from docker output to the terraform.tfvars
+
+Run terraform plan
+
+---
+
+- How to work with spotify provider tutorial:
+
+    https://learn.hashicorp.com/tutorials/terraform/spotify-playlist
